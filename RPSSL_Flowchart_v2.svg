@@ -1,0 +1,210 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="423pt" height="865pt" viewBox="0.00 0.00 422.96 864.80">
+<g id="graph0" class="graph" transform="translate(4,860.7999877929688) scale(1)" data-name="rpSsl_round_table">
+
+<polygon fill="white" stroke="none" points="-4,4 -4,-860.8 418.96,-860.8 418.96,4 -4,4"/>
+<!-- start -->
+<g id="node1" class="node" pointer-events="visible" data-name="start">
+
+<ellipse fill="none" stroke="black" cx="303.75" cy="-838.8" rx="41.43" ry="18"/>
+<text text-anchor="middle" x="303.75" y="-835.5" font-family="Times,serif" font-size="11.00">Round start</text>
+</g>
+<!-- prompt -->
+<g id="node2" class="node" pointer-events="visible" data-name="prompt">
+
+<polygon fill="none" stroke="black" points="376.18,-783.8 231.33,-783.8 231.33,-747.8 376.18,-747.8 376.18,-783.8"/>
+<text text-anchor="middle" x="303.75" y="-762.5" font-family="Times,serif" font-size="11.00">Prompt: "Select shape (0..4)"</text>
+</g>
+<!-- start&#45;&gt;prompt -->
+<g id="edge1" class="edge" data-name="start-&gt;prompt">
+
+<path fill="none" stroke="black" d="M303.75,-820.61C303.75,-813.03 303.75,-803.9 303.75,-795.34"/>
+<polygon fill="black" stroke="black" points="307.25,-795.34 303.75,-785.34 300.25,-795.34 307.25,-795.34"/>
+</g>
+<!-- readIn -->
+<g id="node3" class="node" pointer-events="visible" data-name="readIn">
+
+<polygon fill="none" stroke="black" points="314.01,-710.8 193.5,-710.8 193.5,-674.8 314.01,-674.8 314.01,-710.8"/>
+<text text-anchor="middle" x="253.75" y="-689.5" font-family="Times,serif" font-size="11.00">Read user key (getchar)</text>
+</g>
+<!-- prompt&#45;&gt;readIn -->
+<g id="edge2" class="edge" data-name="prompt-&gt;readIn">
+
+<path fill="none" stroke="black" d="M291.65,-747.61C285.82,-739.33 278.69,-729.21 272.2,-719.99"/>
+<polygon fill="black" stroke="black" points="275.24,-718.23 266.62,-712.07 269.51,-722.26 275.24,-718.23"/>
+</g>
+<!-- valid -->
+<g id="node4" class="node" pointer-events="visible" data-name="valid">
+
+<polygon fill="none" stroke="black" points="234.75,-637.8 149.57,-619.8 234.75,-601.8 319.94,-619.8 234.75,-637.8"/>
+<text text-anchor="middle" x="234.75" y="-616.5" font-family="Times,serif" font-size="11.00">Is key a digit 0..4?</text>
+</g>
+<!-- readIn&#45;&gt;valid -->
+<g id="edge3" class="edge" data-name="readIn-&gt;valid">
+
+<path fill="none" stroke="black" d="M249.15,-674.61C247.05,-666.74 244.5,-657.21 242.13,-648.37"/>
+<polygon fill="black" stroke="black" points="245.54,-647.56 239.57,-638.8 238.78,-649.37 245.54,-647.56"/>
+</g>
+<!-- bad -->
+<g id="node5" class="node" pointer-events="visible" data-name="bad">
+
+<polygon fill="none" stroke="black" points="414.49,-549 281.01,-549 281.01,-513 414.49,-513 414.49,-549"/>
+<text text-anchor="middle" x="347.75" y="-534.3" font-family="Times,serif" font-size="11.00">Print error:</text>
+<text text-anchor="middle" x="347.75" y="-521.1" font-family="Times,serif" font-size="11.00">"Shape key does not exist"</text>
+</g>
+<!-- valid&#45;&gt;bad -->
+<g id="edge4" class="edge" data-name="valid-&gt;bad">
+
+<path fill="none" stroke="black" d="M252.41,-605.24C269.42,-592.17 295.53,-572.11 316.13,-556.29"/>
+<polygon fill="black" stroke="black" points="318.16,-559.15 323.96,-550.28 313.9,-553.59 318.16,-559.15"/>
+<text text-anchor="middle" x="307.75" y="-571.2" font-family="Times,serif" font-size="14.00">no</text>
+</g>
+<!-- asgHum -->
+<g id="node6" class="node" pointer-events="visible" data-name="asgHum">
+
+<polygon fill="none" stroke="black" points="262.91,-549 170.6,-549 170.6,-513 262.91,-513 262.91,-549"/>
+<text text-anchor="middle" x="216.75" y="-527.7" font-family="Times,serif" font-size="11.00">human = key - '0'</text>
+</g>
+<!-- valid&#45;&gt;asgHum -->
+<g id="edge6" class="edge" data-name="valid-&gt;asgHum">
+
+<path fill="none" stroke="black" d="M231.28,-602.06C228.83,-590.21 225.47,-574.02 222.6,-560.19"/>
+<polygon fill="black" stroke="black" points="226.1,-559.84 220.64,-550.76 219.25,-561.26 226.1,-559.84"/>
+<text text-anchor="middle" x="236.08" y="-571.2" font-family="Times,serif" font-size="14.00">yes</text>
+</g>
+<!-- bad&#45;&gt;prompt -->
+<g id="edge5" class="edge" data-name="bad-&gt;prompt">
+
+<path fill="none" stroke="black" d="M346.47,-549.48C343.86,-581.73 336.9,-652.63 322.75,-710.8 320.65,-719.43 317.71,-728.62 314.76,-736.92"/>
+<polygon fill="black" stroke="black" points="311.53,-735.54 311.34,-746.14 318.1,-737.98 311.53,-735.54"/>
+</g>
+<!-- rng -->
+<g id="node7" class="node" pointer-events="visible" data-name="rng">
+
+<polygon fill="none" stroke="black" points="265.81,-476 167.69,-476 167.69,-440 265.81,-440 265.81,-476"/>
+<text text-anchor="middle" x="216.75" y="-454.7" font-family="Times,serif" font-size="11.00">agent = rand() % 5</text>
+</g>
+<!-- asgHum&#45;&gt;rng -->
+<g id="edge7" class="edge" data-name="asgHum-&gt;rng">
+
+<path fill="none" stroke="black" d="M216.75,-512.81C216.75,-505.23 216.75,-496.1 216.75,-487.54"/>
+<polygon fill="black" stroke="black" points="220.25,-487.54 216.75,-477.54 213.25,-487.54 220.25,-487.54"/>
+</g>
+<!-- lookup -->
+<g id="node8" class="node" pointer-events="visible" data-name="lookup">
+
+<polygon fill="none" stroke="black" points="293.92,-403 139.59,-403 139.59,-367 293.92,-367 293.92,-403"/>
+<text text-anchor="middle" x="216.75" y="-381.7" font-family="Times,serif" font-size="11.00">outcome = RES[human][agent]</text>
+</g>
+<!-- rng&#45;&gt;lookup -->
+<g id="edge8" class="edge" data-name="rng-&gt;lookup">
+
+<path fill="none" stroke="black" d="M216.75,-439.81C216.75,-432.23 216.75,-423.1 216.75,-414.54"/>
+<polygon fill="black" stroke="black" points="220.25,-414.54 216.75,-404.54 213.25,-414.54 220.25,-414.54"/>
+</g>
+<!-- branch -->
+<g id="node9" class="node" pointer-events="visible" data-name="branch">
+
+<polygon fill="none" stroke="black" points="216.75,-330.1 105.35,-282.4 216.75,-234.7 328.16,-282.4 216.75,-330.1"/>
+<text text-anchor="middle" x="216.75" y="-292.3" font-family="Times,serif" font-size="11.00">outcome == TIE?</text>
+<text text-anchor="middle" x="216.75" y="-279.1" font-family="Times,serif" font-size="11.00">== HUMAN_WINS?</text>
+<text text-anchor="middle" x="216.75" y="-265.9" font-family="Times,serif" font-size="11.00">== AGENT_WINS?</text>
+</g>
+<!-- lookup&#45;&gt;branch -->
+<g id="edge9" class="edge" data-name="lookup-&gt;branch">
+
+<path fill="none" stroke="black" d="M216.75,-366.93C216.75,-359.76 216.75,-350.95 216.75,-341.78"/>
+<polygon fill="black" stroke="black" points="220.25,-342.01 216.75,-332.01 213.25,-342.01 220.25,-342.01"/>
+</g>
+<!-- tie -->
+<g id="node10" class="node" pointer-events="visible" data-name="tie">
+
+<polygon fill="none" stroke="black" points="145.26,-182 0.25,-182 0.25,-146 145.26,-146 145.26,-182"/>
+<text text-anchor="middle" x="72.75" y="-160.7" font-family="Times,serif" font-size="11.00">Result: Tie (no score change)</text>
+</g>
+<!-- branch&#45;&gt;tie -->
+<g id="edge10" class="edge" data-name="branch-&gt;tie">
+
+<path fill="none" stroke="black" d="M178.92,-250.82C155.3,-231.72 125.28,-207.46 103.2,-189.61"/>
+<polygon fill="black" stroke="black" points="105.42,-186.9 95.44,-183.34 101.02,-192.35 105.42,-186.9"/>
+<text text-anchor="middle" x="147.64" y="-204.2" font-family="Times,serif" font-size="14.00">TIE</text>
+</g>
+<!-- hWin -->
+<g id="node11" class="node" pointer-events="visible" data-name="hWin">
+
+<polygon fill="none" stroke="black" points="269.59,-182 163.92,-182 163.92,-146 269.59,-146 269.59,-182"/>
+<text text-anchor="middle" x="216.75" y="-167.3" font-family="Times,serif" font-size="11.00">Result: Human wins</text>
+<text text-anchor="middle" x="216.75" y="-154.1" font-family="Times,serif" font-size="11.00">human_score++</text>
+</g>
+<!-- branch&#45;&gt;hWin -->
+<g id="edge11" class="edge" data-name="branch-&gt;hWin">
+
+<path fill="none" stroke="black" d="M216.75,-234.39C216.75,-220.57 216.75,-205.88 216.75,-193.59"/>
+<polygon fill="black" stroke="black" points="220.25,-193.73 216.75,-183.73 213.25,-193.73 220.25,-193.73"/>
+<text text-anchor="middle" x="264.58" y="-204.2" font-family="Times,serif" font-size="14.00">HUMAN_WINS</text>
+</g>
+<!-- aWin -->
+<g id="node12" class="node" pointer-events="visible" data-name="aWin">
+
+<polygon fill="none" stroke="black" points="388.09,-182 287.42,-182 287.42,-146 388.09,-146 388.09,-182"/>
+<text text-anchor="middle" x="337.75" y="-167.3" font-family="Times,serif" font-size="11.00">Result: Agent wins</text>
+<text text-anchor="middle" x="337.75" y="-154.1" font-family="Times,serif" font-size="11.00">agent_score++</text>
+</g>
+<!-- branch&#45;&gt;aWin -->
+<g id="edge12" class="edge" data-name="branch-&gt;aWin">
+
+<path fill="none" stroke="black" d="M267.15,-255.83C283.92,-245.47 301.65,-232.27 314.75,-216.8 320.68,-209.81 325.34,-201.04 328.87,-192.72"/>
+<polygon fill="black" stroke="black" points="332.04,-194.23 332.33,-183.64 325.5,-191.74 332.04,-194.23"/>
+<text text-anchor="middle" x="369.86" y="-204.2" font-family="Times,serif" font-size="14.00">AGENT_WINS</text>
+</g>
+<!-- out -->
+<g id="node13" class="node" pointer-events="visible" data-name="out">
+
+<polygon fill="none" stroke="black" points="303.68,-109 129.83,-109 129.83,-73 303.68,-73 303.68,-109"/>
+<text text-anchor="middle" x="216.75" y="-94.3" font-family="Times,serif" font-size="11.00">Print: human &amp; agent labels+emoji,</text>
+<text text-anchor="middle" x="216.75" y="-81.1" font-family="Times,serif" font-size="11.00">then current score</text>
+</g>
+<!-- tie&#45;&gt;out -->
+<g id="edge13" class="edge" data-name="tie-&gt;out">
+
+<path fill="none" stroke="black" d="M107.98,-145.63C127.07,-136.22 150.87,-124.48 171.34,-114.39"/>
+<polygon fill="black" stroke="black" points="172.61,-117.67 180.03,-110.1 169.52,-111.39 172.61,-117.67"/>
+</g>
+<!-- hWin&#45;&gt;out -->
+<g id="edge15" class="edge" data-name="hWin-&gt;out">
+
+<path fill="none" stroke="black" d="M216.75,-145.81C216.75,-138.23 216.75,-129.1 216.75,-120.54"/>
+<polygon fill="black" stroke="black" points="220.25,-120.54 216.75,-110.54 213.25,-120.54 220.25,-120.54"/>
+</g>
+<!-- aWin&#45;&gt;out -->
+<g id="edge17" class="edge" data-name="aWin-&gt;out">
+
+<path fill="none" stroke="black" d="M308.15,-145.63C292.48,-136.43 273.02,-125.02 256.09,-115.08"/>
+<polygon fill="black" stroke="black" points="258.17,-112.24 247.77,-110.2 254.63,-118.28 258.17,-112.24"/>
+</g>
+<!-- end -->
+<g id="node14" class="node" pointer-events="visible" data-name="end">
+
+<ellipse fill="none" stroke="black" cx="216.75" cy="-18" rx="39.65" ry="18"/>
+<text text-anchor="middle" x="216.75" y="-14.7" font-family="Times,serif" font-size="11.00">Round end</text>
+</g>
+<!-- out&#45;&gt;end -->
+<g id="edge14" class="edge" data-name="out-&gt;end">
+
+<path fill="none" stroke="black" d="M205,-72.81C203.37,-65.03 202.88,-55.62 203.54,-46.86"/>
+<polygon fill="black" stroke="black" points="206.99,-47.43 204.92,-37.04 200.06,-46.45 206.99,-47.43"/>
+</g>
+<!-- out&#45;&gt;end -->
+<g id="edge16" class="edge" data-name="out-&gt;end">
+
+<path fill="none" stroke="black" d="M216.75,-72.81C216.75,-65.23 216.75,-56.1 216.75,-47.54" style=""/>
+<polygon fill="black" stroke="black" points="220.25,-47.54 216.75,-37.54 213.25,-47.54 220.25,-47.54"/>
+</g>
+<!-- out&#45;&gt;end -->
+<g id="edge18" class="edge" data-name="out-&gt;end">
+
+<path fill="none" stroke="black" d="M228.51,-72.81C230.14,-65.03 230.63,-55.62 229.97,-46.86" style=""/>
+<polygon fill="black" stroke="black" points="233.45,-46.45 228.58,-37.04 226.52,-47.43 233.45,-46.45"/>
+</g>
+</g>
+</svg>
